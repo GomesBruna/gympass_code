@@ -1,0 +1,14 @@
+import unittest
+
+from script.gympass import tipo_dados,resumo_pilotos
+import datetime
+
+
+class TestTipo(unittest.TestCase):
+    def testentrada(self):
+        self.assertEqual(tipo_dados([['23:49:08.277','038','','F.MASSA','1','1:02.852','44,275']]), [[datetime.time(23, 49, 8, 277000), '038', 'F.MASSA', 1, '1:02.852', 44.275]]
+)
+    def testResumoPiloto(self):
+        self.assertEqual(resumo_pilotos([[[datetime.time(23, 49, 11, 75000), '002', 'K.RAIKKONEN', 1, '1:04.108', 43.408], [datetime.time(23, 50, 15, 57000), '002', 'K.RAIKKONEN', 2, '1:03.982', 43.493], [datetime.time(23, 51, 19, 44000), '002', 'K.RAIKKONEN', 3, '1:03.987', 43.49], [datetime.time(23, 52, 22, 120000), '002', 'K.RAIKKONEN', 4, '1:03.076', 44.118]], [[datetime.time(23, 49, 30, 976000), '015', 'F.ALONSO', 1, '1:18.456', 35.47], [datetime.time(23, 50, 37, 987000), '015', 'F.ALONSO', 2, '1:07.011', 41.528], [datetime.time(23, 51, 46, 691000), '015', 'F.ALONSO', 3, '1:08.704', 40.504], [datetime.time(23, 53, 6, 741000), '015', 'F.ALONSO', 4, '1:20.050', 34.763]], [[datetime.time(23, 49, 8, 277000), '038', 'F.MASSA', 1, '1:02.852', 44.275], [datetime.time(23, 50, 11, 447000), '038', 'F.MASSA', 2, '1:03.170', 44.053], [datetime.time(23, 51, 14, 216000), '038', 'F.MASSA', 3, '1:02.769', 44.334], [datetime.time(23, 52, 17, 3000), '038', 'F.MASSA', 4, '1:02.787', 44.321]], [[datetime.time(23, 49, 10, 858000), '033', 'R.BARRICHELLO', 1, '1:04.352', 43.243], [datetime.time(23, 50, 14, 860000), '033', 'R.BARRICHELLO', 2, '1:04.002', 43.48], [datetime.time(23, 51, 18, 576000), '033', 'R.BARRICHELLO', 3, '1:03.716', 43.675], [datetime.time(23, 52, 22, 586000), '033', 'R.BARRICHELLO', 4, '1:04.010', 43.474]], [[datetime.time(23, 52, 1, 796000), '011', 'S.VETTEL', 1, '3:31.315', 13.169], [datetime.time(23, 53, 39, 660000), '011', 'S.VETTEL', 2, '1:37.864', 28.435], [datetime.time(23, 54, 57, 757000), '011', 'S.VETTEL', 3, '1:18.097', 35.633]], [[datetime.time(23, 49, 12, 667000), '023', 'M.WEBBER', 1, '1:04.414', 43.202], [datetime.time(23, 50, 17, 472000), '023', 'M.WEBBER', 2, '1:04.805', 42.941], [datetime.time(23, 51, 21, 759000), '023', 'M.WEBBER', 3, '1:04.287', 43.287], [datetime.time(23, 52, 25, 975000), '023', 'M.WEBBER', 4, '1:04.216', 43.335]]]),[[datetime.time(23, 52, 17, 3000), '038', 'F.MASSA', 4, '4:11.578', 44.246, 3, '1:02.769', 1], [datetime.time(23, 52, 22, 120000), '002', 'K.RAIKKONEN', 4, '4:15.153', 43.627, 4, '1:03.076', 2], [datetime.time(23, 52, 22, 586000), '033', 'R.BARRICHELLO', 4, '4:16.08', 43.468, 3, '1:03.716', 3], [datetime.time(23, 52, 25, 975000), '023', 'M.WEBBER', 4, '4:17.722', 43.191, 4, '1:04.216', 4], [datetime.time(23, 53, 6, 741000), '015', 'F.ALONSO', 4, '4:54.221', 38.066, 2, '1:07.011', 5], [datetime.time(23, 54, 57, 757000), '011', 'S.VETTEL', 3, '6:27.276', 25.746, 3, '1:18.097', 6]])
+if __name__ == '__main__':
+    unittest.main()

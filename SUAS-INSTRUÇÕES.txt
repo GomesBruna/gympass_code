@@ -1,0 +1,5 @@
+Comando para rodar o script:
+
+gympass.py < ../CAMINHOARQUIVO/log_gympass.txt
+
+como saida temos 2 arquivos um resultado simples com os primeiros requisitos e um completo com os adicionais.
